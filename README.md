@@ -117,6 +117,7 @@
         ipconfig
 ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/c7849408-708d-415b-8274-161b73f27586)
 - Change Adapter settings
+  
 ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/17d2b5bc-4c90-4c15-b53a-e0733b2a774d)
 
 - On the target machine, login to the splunk machine http://192.168.10.10:8000 and log in using credentials made in the previous section to access the splunk GUI.
@@ -130,7 +131,20 @@
 - For receiving indexer is splunk server IP, that is, 192.168.10.10 on port 9997
 - Click install
 ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/ffd76a8a-88b8-437a-abde-66a96854b23c)
+- Login to splunk
 
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/ce0ea50f-9adc-4f3f-817a-6e5b68f794f7)
+
+- Download sysmon
+- Download raw sysmon conf from https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml
+- Configure sysmon
+- Configure inputs.conf file to instruct splunk forwarder
+- File location C:/Programs Files/SplunkUniversalForwarder/etc/system/default/inputs
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/4b02e128-5889-4693-8b30-2603d93dbc7f)
+- Restart the Splunk Forwarder service
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/2f0b0de4-b93a-475b-bd56-e54346dc913a)
+- In splunk, create a new index to capture forwarder details as was the case inputs.conf => endpoint
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/a13fa7c8-4935-4506-85d8-fd8d621afaee)
 
 
 
