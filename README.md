@@ -93,6 +93,23 @@
 
 - To view splunk files. All permissions are splunk
 ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/73f4afc6-68cc-4a1c-858f-b606cbfa5bf0)
+- Enter splunk user
 
+      sudo -u splunk bash
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/8ebc9bbf-47f3-4868-a0ee-46be99e84203)
 
-  
+- Change into /bin
+- then run the installer
+
+      ./splunk start
+- Set up entering credentials, i.e., name and password
+
+      exit
+      cd bin
+      sudo ./splunk enable boot-start -user splunk
+- The last command ensures that whenever the VM boots, splunk runs with the user splunk
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/40816e06-8783-4803-80be-553ca5bc575a)
+
+### Target Machine
+- Rename PC to target-PC and restart machine
+- 
