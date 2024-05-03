@@ -1,7 +1,8 @@
 # ActiveDirectory Lab
 ## Network Diagram
 ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/38a6abbd-bb32-44ff-a1d8-e9e7e8f1435f)
-## Steps followed
+
+## Install Virtual machines
 - Download virtualbox at https://www.virtualbox.org/
 - Checksum SHA256 to ensure correct download.
 - Install virtualbox
@@ -32,4 +33,11 @@
   - Enter credentials username, server name & password
   - Reboot when prompted then log in
   - update the machine
+
         sudo apt-get update && sudo apt-get upgrade
+    
+## Install and Configure Sysmon and Splunk
+### To be installed on Windows target machine (Windows 10) and Windows server (Active Directory)
+- First, on  virtualbox, ensure all machines' network settings are set to NAT
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/87b5fb27-48ad-4306-821e-0dd91c9593de)
+- 
