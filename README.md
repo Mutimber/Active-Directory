@@ -112,4 +112,25 @@
 
 ### Target Machine
 - Rename PC to target-PC and restart machine
-- 
+- Check ip on the command prompt
+
+        ipconfig
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/c7849408-708d-415b-8274-161b73f27586)
+- Change Adapter settings
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/17d2b5bc-4c90-4c15-b53a-e0733b2a774d)
+
+- On the target machine, login to the splunk machine http://192.168.10.10:8000 and log in using credentials made in the previous section to access the splunk GUI.
+- Then, log in to splunk.com using account details and download the Universal Splunk Forwarder.
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/c9773c22-3740-4581-aad2-c74c2f4b2431)
+- Choose the 64-bit version
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/f179321b-49a6-45a2-a520-26ec91f71a8e)
+- After download, double-click on splunk> universal forwarder, choosing an on-premises Splunk Enterprise instance in the configuration.
+- Add credentials and select Generate password
+- Skip Deployment server
+- For receiving indexer is splunk server IP, that is, 192.168.10.10 on port 9997
+- Click install
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/ffd76a8a-88b8-437a-abde-66a96854b23c)
+
+
+
+
