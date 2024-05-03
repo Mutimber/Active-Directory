@@ -38,6 +38,61 @@
     
 ## Install and Configure Sysmon and Splunk
 ### To be installed on Windows target machine (Windows 10) and Windows server (Active Directory)
-- First, on  virtualbox, ensure all machines' network settings are set to NAT
-  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/87b5fb27-48ad-4306-821e-0dd91c9593de)
-- 
+- First, on  virtualbox, ensure all machines' network settings are set to NAT Network
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/19aadd87-dff1-4d99-b67e-24b271e8beb4)
+- Change all machines in the lab to this network
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/3ff65c2e-0504-4558-9049-1b1532222cca)
+- When we check IP of the splunk machine, it gives a different IP from the static one already proposed in the network diagram.
+- Change it by editing /etc/netplan/00-installer-config.yaml file
+
+      sudo nano /etc/netplan/00-installer-config.yaml
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/f9485904-07bc-4fbe-ad31-14c6c6081968)
+- Changes implemented
+
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/5f5320ee-69d3-453c-9534-69cc418405db)
+
+### Splunk
+- On host, go to splunk.com and sign up with a corporate email and verify
+- Back to Products,choose Free Trial and Downloads
+- On Splunk Enterprise, select Get My Free Trial
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/e73422b7-2d91-4848-a2a9-5ad400f0a19c)
+- Select Linux machine
+- Download deb file
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/f65d0a31-2370-436c-b0a3-ff76f93323e7)
+- Back on splunk vm, install guest add-ons for virtualbox
+
+      sudo apt-get install virtualbox-guest-additions-iso
+
+- After install, go to Devices > Shared Folders > Add Folder by clicking on the green + icon on the right
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/940a2402-113c-446e-b470-14a419b9e90e)
+- As below
+
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/e59a5804-7dc2-46f1-93a6-fdddb35c4854)
+- Reboot splunk vm
+- Now adduser
+
+      sudo adduser robin vboxsf
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/f75452e7-d3b6-4b28-a9f9-96f57c9dbc8f)
+
+- Create new directory called share
+
+      mkdir share
+- Mount shared folder onto share directory
+
+      sudo mount -t vboxsf -o uid=1000,gid=1000 F_DRIVE share/
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/fc4fab83-5c5a-4a65-9c25-5fc96259ea60)
+
+- Change into share directory to view files and folders using ls -la command. Splunk installer downloaded before is among these as shown below.
+
+ ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/2ae34d9a-72d0-41bb-9771-1a623dfcc7c2)
+
+- Now, install splunk
+
+      sudo dpkg -i splunk-9.2.1-78803f08aabb-linux-2.6-amd64.deb
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/5bd8b9cd-3bbc-4251-8390-2bbc96f43acd)
+
+- To view splunk files. All permissions are splunk
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/73f4afc6-68cc-4a1c-858f-b606cbfa5bf0)
+
+
+  
