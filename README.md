@@ -144,7 +144,10 @@
 - Restart the Splunk Forwarder service
   ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/2f0b0de4-b93a-475b-bd56-e54346dc913a)
 - In splunk, create a new index to capture forwarder details as was the case inputs.conf => endpoint
-![image](https://github.com/Mutimber/Active-Directory/assets/113706552/a13fa7c8-4935-4506-85d8-fd8d621afaee)
+![image](https://github.com/Mutimber/Active-Directory/assets/113706552/8758952b-3cdf-449e-9a4e-b6758abd1775)
+
+- Next, set splunk server to receive data on port 9997 as stipulated before.
+  ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/1fea4afd-7ee1-4880-852e-bdb5aa3b1ae2)
 
 
 
