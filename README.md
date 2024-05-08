@@ -148,6 +148,7 @@
 
 - Next, set splunk server to receive data on port 9997 as stipulated before.
   ![image](https://github.com/Mutimber/Active-Directory/assets/113706552/1fea4afd-7ee1-4880-852e-bdb5aa3b1ae2)
+  m
 
 
 
